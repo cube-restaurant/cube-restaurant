@@ -1,0 +1,23 @@
+{
+  "name": "cube-restaurant",
+  "version": "1.0.0",
+  "description": "Monorepo containing all the application code for cube restaurant project",
+  "main": "index.js",
+  "scripts": {
+    "create:package": "lerna create"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cube-restaurant/cube-restaurant.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cube-restaurant/cube-restaurant/issues"
+  },
+  "homepage": "https://github.com/cube-restaurant/cube-restaurant#readme",
+  "devDependencies": {
+    "lerna": "^3.22.1"
+  }
+}
