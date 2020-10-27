@@ -4,7 +4,8 @@
   "description": "Monorepo containing all the application code for cube restaurant project",
   "main": "index.js",
   "scripts": {
-    "create:package": "lerna create"
+    "create:package": "lerna create",
+    "dev": "lerna run dev --stream"
   },
   "repository": {
     "type": "git",
