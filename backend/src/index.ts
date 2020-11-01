@@ -48,7 +48,7 @@ const main = async () => {
   });
 
   app.listen(__PORT__, () => {
-    console.log(`Suecessfully started express app on http://localhost:${__PORT__}`);
+    console.log(`Suecessfully started express app on: http://localhost:${__PORT__}`);
   });
 };
 

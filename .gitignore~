@@ -107,4 +107,4 @@ dist
 db-data/
 
 # DS Store
-.DS_Store
+.DS_store
