@@ -11,6 +11,11 @@
     "type": "git",
     "url": "git+https://github.com/cube-restaurant/cube-restaurant.git"
   },
+  "private": true,
+  "workspaces": [
+    "abstract",
+    "backend"
+  ],
   "keywords": [],
   "author": "",
   "license": "MIT",

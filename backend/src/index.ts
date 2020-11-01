@@ -11,21 +11,15 @@ if (dotenvResult.error) {
 import { ApolloServer } from 'apollo-server-express';
 import express from 'express';
 import { buildSchema } from 'type-graphql';
-import { MikroORM } from '@mikro-orm/core/MikroORM';
+import { DBAdapter, UserEntity } from '@cube/abstract';
 
 import { HelloResolver } from './resolvers/hello.resolvers';
 import { __PORT__ } from './constants';
-import { User } from './entities/User.entity';
-import mikroOrmConfig from './mikro-orm.config';
 
 const main = async () => {
-  const orm = await MikroORM.init(mikroOrmConfig);
+  const orm = await DBAdapter.getConnection();
 
-  // Running Migrations
-  const migrator = orm.getMigrator();
-  await migrator.up();
-
-  const user = orm.em.create(User, {
+  const user = orm.em.create(UserEntity, {
     firstName: 'Coding',
     lastName: 'fun',
     email: 'admin@codingwith.fun',
