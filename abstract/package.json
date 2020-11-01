@@ -1,0 +1,57 @@
+{
+  "name": "@cube/abstract",
+  "version": "1.0.0",
+  "description": "Contains Schema for DB and type graphql",
+  "author": "Harsh Patel <harshppatel2880@gmail.com>",
+  "homepage": "https://github.com/cube-restaurant/cube-restaurant/tree/master/abstract#readme",
+  "license": "MIT",
+  "main": "src/index.ts",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cube-restaurant/cube-restaurant.git"
+  },
+  "mikro-orm": {
+    "useTsNode": true,
+    "configPaths": [
+      "./src/config/mikro-orm.config.ts",
+      "./dist/config/mikro-orm.config.js"
+    ]
+  },
+  "resolutions": {
+    "knex": "0.21.6"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "start": "tsc && node dist/index.js",
+    "dev": "nodemon --watch src/ -e ts --exec \"ts-node src/index.ts\"",
+    "gen:migration": "mikro-orm migration:create"
+  },
+  "bugs": {
+    "url": "https://github.com/cube-restaurant/cube-restaurant/issues"
+  },
+  "dependencies": {
+    "@mikro-orm/core": "^4.2.3",
+    "@mikro-orm/migrations": "^4.2.3",
+    "@mikro-orm/postgresql": "^4.2.3",
+    "dotenv": "^8.2.0",
+    "reflect-metadata": "^0.1.13",
+    "type-graphql": "^1.1.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.6.0",
+    "@typescript-eslint/parser": "^4.6.0",
+    "eslint": "^7.12.1",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "mikro-orm": "^4.2.3",
+    "nodemon": "^2.0.6",
+    "prettier": "^2.1.2",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.5"
+  }
+}
